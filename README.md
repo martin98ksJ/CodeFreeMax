@@ -54,9 +54,15 @@
 
 ## 项目展示
 
-<img src="home1.png" alt="Augment2API 首页">
+<img src="img/v1.png" alt="CodeFreeMax 界面展示 1">
 <br>
-<img src="home2.png" alt="Augment2API 首页">
+<img src="img/v2.png" alt="CodeFreeMax 界面展示 2">
+<br>
+<img src="img/v3.png" alt="CodeFreeMax 界面展示 3">
+<br>
+<img src="img/v4.png" alt="CodeFreeMax 界面展示 4">
+<br>
+<img src="img/v5.png" alt="CodeFreeMax 界面展示 5">
 <br>
 
 
