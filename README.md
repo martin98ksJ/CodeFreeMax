@@ -2,11 +2,19 @@
 
 🚀 将 Kiro、Antigravity、Warp、Orchids 等 IDE 转换为兼容 OpenAI/Claude/Augment Code 格式的 API 服务。
 
-## 🎉 V2.3.0 更新说明
+## 🎉 V2.6.0 更新说明
 
 > ⚠️ **重要提示**:
 > 1. 公共授权码：`144bd7a0-6ca2-4b7e-ac1c-1a29afb50662`
-> 2. 更新到 V2.3.0 版本，AugmentCode 插件需要更新到 **v3.0.0**！
+
+### 新增功能
+
+- 🤖 **Grok 渠道支持** - 新增 Grok 渠道，纯 OpenAI 对话协议，免费使用！
+
+## 🎉 V2.3.0 更新说明
+
+> ⚠️ **重要提示**:
+> 1. 更新到 V2.3.0 版本，AugmentCode 插件需要更新到 **v3.0.0**！
 
 ### 新增功能
 
@@ -54,9 +62,10 @@
 - 🚀 **Augment Code 支持** - 完美支持反代 Augment Code，已处理大部分兼容性问题
   - ⭐ **推荐使用 Kiro 渠道**: AugmentCode 目前仅 Kiro 完美适配，其他渠道可能存在兼容性问题
 - 🔄 **多协议支持** - 同时支持 Claude `/v1/messages` 和 OpenAI `/v1/chat/completions` 端点
-- 🌌 **多渠道支持** - 支持 Kiro、Antigravity、Warp 和 Orchids 四渠道，可独立管理
+- 🌌 **多渠道支持** - 支持 Kiro、Antigravity、Warp、Orchids 和 Grok 五渠道，可独立管理
   - **Claude 协议**: 支持 Kiro、Antigravity、Warp 和 Orchids 渠道
   - **OpenAI 格式**: 所有渠道均支持
+  - **Grok 渠道**: 纯 OpenAI 对话协议，免费使用
 - 🌐 **代理池支持** - 支持 HTTP/HTTPS/SOCKS5 代理，可按渠道配置独立代理
 - 🔑 **Session 派生** - 代理地址支持 `%s` 占位符，自动替换为账号唯一 Session ID，实现 IP 隔离
 - ⚖️ **负载均衡** - 多账号随机分配，自动跳过异常账号
