@@ -1,7 +1,10 @@
 FROM ssmdo/kiro2api:latest
 
-# 复制配置文件和启动脚本
-COPY config.yaml /app/manifest/config/config.yaml
+# 安装 envsubst 工具
+RUN apk add --no-cache gettext
+
+# 复制配置模板和启动脚本
+COPY config.yaml /app/manifest/config/config.yaml.template
 COPY entrypoint.sh /entrypoint.sh
 
 # 设置脚本执行权限
