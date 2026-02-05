@@ -16,8 +16,10 @@ database:
     link: "sqlite:./data/kiro.db"
 
 # Redis 配置（用于请求计数）
+# Railway 部署时会自动注入 REDIS_URL，格式: redis://default:password@host:port
+# 本地 docker-compose 使用: kiro2api-redis:6379
 redis:
-  addr: "kiro2api-redis:6379"
-  password: ""
+  addr: "${REDIS_ADDR:kiro2api-redis:6379}"
+  password: "${REDIS_PASSWORD:}"
   db: 0
 
