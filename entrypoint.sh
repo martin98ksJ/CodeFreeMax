@@ -14,16 +14,18 @@ envsubst < /app/manifest/config/config.yaml.template > /app/manifest/config/conf
 echo "=== Config file after substitution ==="
 cat /app/manifest/config/config.yaml
 
-# 查找可执行文件
-if [ -f "/app/kiro2api" ]; then
-    exec /app/kiro2api
-elif [ -f "./kiro2api" ]; then
-    exec ./kiro2api
-elif [ -f "/kiro2api" ]; then
-    exec /kiro2api
-else
-    echo "=== Searching for kiro2api executable ==="
-    find / -name "kiro2api" -type f 2>/dev/null || true
-    echo "ERROR: kiro2api executable not found"
-    exit 1
-fi
+echo "=== Checking /app directory ==="
+ls -la /app/ || true
+
+echo "=== Searching for executables in /app ==="
+find /app -type f -executable 2>/dev/null || true
+
+echo "=== Checking current directory ==="
+pwd
+ls -la
+
+echo "=== Searching for any kiro* files ==="
+find / -name "kiro*" 2>/dev/null | head -20 || true
+
+echo "ERROR: Cannot determine startup command"
+exit 1
