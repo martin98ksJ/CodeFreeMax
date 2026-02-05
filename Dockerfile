@@ -17,6 +17,3 @@ EXPOSE 8000
 
 # 使用自定义入口点脚本
 ENTRYPOINT ["/entrypoint.sh"]
-
-# 保持原镜像的默认命令
-CMD ["/app/kiro2api"]
