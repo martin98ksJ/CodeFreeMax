@@ -8,4 +8,4 @@ RUN mkdir -p /app/data
 
 EXPOSE 8000
 
-CMD ["./kiro2api"]
+# 使用基础镜像的默认启动命令
